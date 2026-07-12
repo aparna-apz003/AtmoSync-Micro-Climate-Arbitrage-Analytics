@@ -22,7 +22,7 @@ My Team Members :
 
 Traditional supply chain analytics rely on standard transit times and macro-weather forecasts — they miss hyper-local micro-climate shifts (e.g. a humidity spike inside one specific container) that quietly spoil agricultural cargo before it reaches market.
 
-**AtmoSync** simulates a live IoT sensor pipeline for refrigerated shipping containers, calculates a real-time **spoilage risk score**, and flags **"Spoilage Arbitrage"** opportunities — cases where rerouting a container to a closer secondary market preserves more value than pushing on to the original destination.
+**AtmoSync** simulates a live IoT sensor pipeline for refrigerated shipping containers, calculates a real-time **spoilage risk score**, and flags **"Spoilage Arbitrage"** opportunities — cases where rerouting a container to a closer secondary market preserves more value than pushing on to the original destination.The core of this analysis relies on rigorous data cleaning and validation protocols to ensure these real-time risk scores remain highly accurate.
 
 This repository documents my work as the **Data Analyst** on the project (data engineering tools like Kafka/Snowflake/dbt/Superset were out of scope — this build uses Python + pandas + Excel instead, to match an analyst's toolkit).
 
