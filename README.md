@@ -41,6 +41,34 @@ This repository documents my work as the **Data Analyst** on the project (data e
 | 4 | Conducted initial Exploratory Data Analysis (EDA) on spoilage factors | ✅ Done |
 | 5 | Compiled findings into stakeholder-ready reports | ✅ Done |
 
+
+### Week 2 — Dashboard Visualizations & In-Depth Modeling
+| # | Task | Status |
+|---|------|--------|
+| 1 | Generated baseline temperature tracking & anomaly distribution visuals | ✅ Done |
+| 2 | Modeled quality degradation across specific commodities and transit hours | ✅ Done |
+| 3 | Mapped risk status severity against automated action workflows | ✅ Done |
+| 4 | Evaluated multi-metric correlation matrix for micro-climate factors | ✅ Done |
+| 5 | Performed market price comparisons for micro-climate arbitrage | ✅ Done |
+
+---
+ ## 📊 Key Findings & Visual Insights (Week 2)
+
+### 1. Temperature Control & Drift Tracking
+* **Trace Analysis (`chart1_temperature_trace.png`):** Real-time monitoring shows distinct containers exceeding safe thermal limits during mid-transit.
+* **Deviation Distribution (`chart2_temp_deviation_hist.png`):** Temperature variance strongly skews right, confirming that localized cooling unit failures cause severe thermal spikes.
+
+### 2. Commodity Spoilage & Quality Modeling
+* **Quality by Commodity (`chart3_quality_by_commodity.png`):** High-sensitivity commodities (Strawberries, Blueberries) exhibit significantly sharper quality loss when exposed to thermal shifts compared to hardier cargo like Tomatoes.
+* **Transit Duration vs. Quality (`chart4_quality_vs_transit_scatter.png`):** Demonstrates a direct inverse correlation between total transit hours and container quality retention, accelerating rapidly after temperature breach events.
+
+### 3. Risk Assessment & Arbitrage Potential
+* **Risk & Action Distribution (`chart5_risk_and_action_counts.png`):** Categorizes fleet status across *Normal*, *Watch*, *At-Risk*, and *Critical* states to trigger automated rerouting actions.
+* **Metric Correlations (`chart6_correlation_heatmap.png`):** Reaffirms that `temp_deviation_c` holds the strongest negative correlation ($r = -0.84$) with `quality_score`.
+* **Price Arbitrage Comparison (`chart7_price_comparison.png`):** Highlights market price differentials between primary and secondary ports, supporting real-time rerouting decisions to maximize recovered value.
+
+---
+
 ## 🗂️ Dataset Summary
 
 | Property | Value |
