@@ -132,15 +132,19 @@ df.to_csv("atmosync_dataset_CLEANED.csv", index=False)
 
 ## 🛠️ Tools Used
 
+
+
 | Purpose | Tool |
 |---|---|
 | Data generation & manipulation | Python, pandas, numpy |
 | Data cleaning & validation | pandas |
-| Exploratory analysis | pandas (`groupby`, `corr`, `value_counts`) |
-| Visualization | matplotlib, seaborn |
-| First-look / stakeholder review | Microsoft Excel |
-| Reporting | Python (reportlab) → PDF |
+| Exploratory analysis & statistical modeling | pandas (`groupby`, `corr`, `value_counts`) |
+| Visualizations & Dashboards | matplotlib, seaborn |
+| Executive Presentation | Microsoft PowerPoint (`AtmoSync.pptx`) |
 | Version control | Git & GitHub |
+
+---
+
 
 ---
 
