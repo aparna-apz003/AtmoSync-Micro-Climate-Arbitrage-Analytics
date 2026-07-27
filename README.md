@@ -30,16 +30,16 @@ Traditional supply chain analytics rely on standard transit times and macro-weat
 This repository documents my work as the **Data Analyst** on the project (data engineering tools like Kafka/Snowflake/dbt/Superset were out of scope — this build uses Python + pandas + Excel instead, to match an analyst's toolkit).
 
 ---
+## ✅ Progress Tracking
 
-Week 1 — Data Foundations & EDA
-#	Task	Status
-1	Defined dataset schema (sensor, logistics, and pricing fields)	✅ Done
-2	Generated 50,000-row synthetic IoT dataset (550 containers × ~91 readings)	✅ Done
-3	Performed 9-step data cleaning process & business-rule validation	✅ Done
-4	Conducted initial Exploratory Data Analysis (EDA) on spoilage factors	✅ Done
-5	Compiled findings into stakeholder-ready reports	✅ Done
-
----
+### Week 1 — Data Foundations & EDA
+| # | Task | Status |
+|---|------|--------|
+| 1 | Defined dataset schema (sensor, logistics, and pricing fields) | ✅ Done |
+| 2 | Generated 50,000-row synthetic IoT dataset (550 containers × ~91 readings) | ✅ Done |
+| 3 | Performed 9-step data cleaning process & business-rule validation | ✅ Done |
+| 4 | Conducted initial Exploratory Data Analysis (EDA) on spoilage factors | ✅ Done |
+| 5 | Compiled findings into stakeholder-ready reports | ✅ Done |
 
 ## 🗂️ Dataset Summary
 
