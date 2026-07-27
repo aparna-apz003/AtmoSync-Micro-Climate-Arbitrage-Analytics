@@ -124,6 +124,7 @@ df.to_csv("atmosync_dataset_CLEANED.csv", index=False)
 - **Faulty cooling units** (18.5% of containers) are the root cause of nearly all serious spoilage: average quality score of **40.5** vs. **96.6** for healthy units.
 - **Strawberries, grapes, and blueberries** are the most climate-sensitive commodities; **tomatoes** are the most forgiving.
 - **$538,693** worth of cargo is currently tied up in At-Risk/Critical containers; rerouting the right containers now would capture an estimated **$120,533** in additional value.
+- Commodity Variance: For highly sensitive goods like strawberries and blueberries, this critical action window shrinks to under 8 hours before total loss
 
 *(Full analysis with charts: see `/reports/AtmoSync_Data_Findings_Report.pdf`)*
 
