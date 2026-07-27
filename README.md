@@ -176,28 +176,28 @@ df.to_csv("atmosync_dataset_CLEANED.csv", index=False)
 
 ## 📁 Repository Structure
 
-```
+```text
 atmosync-analytics/
 │
 ├── data/
 │   ├── atmosync_dataset.csv              # Raw dataset (50,000 rows)
-│   └── atmosync_dataset_CLEANED.csv      # Cleaned & validated dataset
+│   └── cleaned_dataset.csv               # Cleaned & validated dataset
 │
 ├── notebooks/
-│   └── week1_eda_and_cleaning.ipynb      # Full cleaning + EDA workflow
+│   ├── Dataset Cleaning.ipynb            # Initial cleaning & validation workflow
+│   └── week2_dashboard_and_insights.ipynb# Visual dashboard & analysis generation
 │
-├── reports/
-│   ├── AtmoSync_Data_Cleaning_Report.pdf # Cleaning process, stakeholder statements
-│   └── AtmoSync_Data_Findings_Report.pdf # EDA findings with charts
+├── visuals/
+│   ├── chart1_temperature_trace.png       # Continuous temperature monitoring trace
+│   ├── chart2_temp_deviation_hist.png     # Distribution of temperature deviations
+│   ├── chart3_quality_by_commodity.png    # Quality degradation per produce type
+│   ├── chart4_quality_vs_transit_scatter.png # Transit duration vs. quality correlation
+│   ├── chart5_risk_and_action_counts.png  # Risk severity vs. action counts
+│   ├── chart6_correlation_heatmap.png     # Multi-metric feature correlation map
+│   └── chart7_price_comparison.png        # Primary vs. secondary market prices
 │
-├── scripts/
-│   ├── generate_dataset.py               # Synthetic dataset generator
-│   └── clean_data.py                     # Cleaning pipeline
-│
+├── AtmoSync.pptx                         # Stakeholder deck
 └── README.md
-```
-
----
 
 ## 🚀 How to Run This Project
 
@@ -215,19 +215,4 @@ python scripts/clean_data.py
 # Open the analysis notebook
 jupyter notebook notebooks/week1_eda_and_cleaning.ipynb
 ```
-
----
-
-## 📅 Coming in Week 2
-
-- [ ] Build baseline visual dashboards (temperature trends, container routes)
-- [ ] Deeper spoilage-curve modeling per commodity
-- [ ] Merge historical commodity pricing trends
-- [ ] Begin Excel/Power BI-style dashboard mockup for stakeholder review
-
----
-
-## 👤 Author
-
-**Data Analyst — AtmoSync Project**
-GitHub: [@Mameeth-4015](https://github.com/Mameeth-4015)
+--
