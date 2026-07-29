@@ -52,6 +52,20 @@ This repository documents my work as the **Data Analyst** on the project (data e
 | 5 | Performed market price comparisons for micro-climate arbitrage | ✅ Done |
 
 ---
+### Week 3 — Power BI Dashboard Development & Deployment
+| # | Task | Status |
+|---|------|--------|
+| 1 | Imported and modeled `cleaned_dataset.csv` in Power BI (Power Query cleanup, date/time parsing, Date dimension table) | ✅ Done |
+| 2 | Built core DAX measure library (volume, environmental, quality/shelf-life, risk, and financial/arbitrage measures) | ✅ Done |
+| 3 | Designed **Executive Overview** page — fleet-wide KPIs, risk distribution, origin-port map | ✅ Done |
+| 4 | Designed **Environmental Monitoring** page — temperature/humidity drift trends over transit hours, temp-vs-vibration scatter analysis, flagged-container watchlist | ✅ Done |
+| 5 | Designed **Risk & Alerts** page — live risk matrix with latest-status-per-container logic, faulty cooling unit tracking | ✅ Done |
+| 6 | Designed **Financial / Arbitrage Analysis** page — primary vs. secondary market value comparison, reroute-opportunity breakdown by commodity | ✅ Done |
+| 7 | Built **Container Detail** drill-through page for single-shipment sensor history | ✅ Done |
+| 8 | Applied conditional formatting & consistent risk-status color theme across all pages | ✅ Done |
+| 9 | Documented full build process (step-by-step guide + DAX reference) for handoff | ✅ Done |
+
+---
  ## 📊 Key Findings & Visual Insights (Week 2)
 
 ### 1. Temperature Control & Drift Tracking
