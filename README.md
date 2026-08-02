@@ -80,7 +80,7 @@ This repository documents our work as the **Data Analytics Team** on the project
 
 ---
 
-## 📊 Key Findings & Visual Insights (Week 3)
+## 📊 Key Findings & Visual Insights (week 3)
 
 ### 1. From Static Charts to a Live Decision Tool
 * Week 2's matplotlib/seaborn analysis confirmed *what* drives spoilage risk; Week 3 turned those findings into a **self-service Power BI dashboard** that operations staff can filter, drill into, and monitor without needing Python or notebooks.
