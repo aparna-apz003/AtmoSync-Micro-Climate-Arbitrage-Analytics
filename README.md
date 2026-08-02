@@ -87,6 +87,7 @@ To replicate this project locally:
    ```bash
    git clone [https://github.com/your-username/atmosync-analytics.git](https://github.com/your-username/atmosync-analytics.git)
    cd atmosync-analytics
+   pip install pandas numpy matplotlib seaborn jupyter
 
 ## 📊 Key Findings & Visual Insights (week 3)
 
