@@ -79,6 +79,14 @@ This repository documents our work as the **Data Analytics Team** on the project
 * **Price Arbitrage Comparison (`chart7_price_comparison.png`):** Highlights market price differentials between primary and secondary ports, supporting real-time rerouting decisions to maximize recovered value.
 
 ---
+## 🚀 Installation & Setup
+
+To replicate this project locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/atmosync-analytics.git](https://github.com/your-username/atmosync-analytics.git)
+   cd atmosync-analytics
 
 ## 📊 Key Findings & Visual Insights (week 3)
 
