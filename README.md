@@ -121,6 +121,11 @@ To replicate this project locally:
 | Version control | Git & GitHub |
 
 ---
+## 🔮 Future Scope
+
+* **Machine Learning Prediction:** Implement an XGBoost or Random Forest model to predict the exact hour a container will drop below the critical quality threshold based on early temperature drift.
+* **Real-Time Data Streaming:** Transition from static CSV batches to a simulated real-time Kafka or AWS Kinesis stream to mimic live IoT sensor pings.
+* **API Integration:** Connect with live market-pricing APIs to pull real-time commodity prices for dynamic arbitrage calculations.
 
 ## 📁 Repository Structure
 
