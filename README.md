@@ -1,22 +1,19 @@
 # 🥑 AtmoSync — Micro-Climate Arbitrage Analytics
 
-Team Members:
+**Team Members:**
+* Aparna C
+* Mameeth C
+* Malavika Nair
+* Lucky Aswal
 
-Aparna c
-Mameeth C
-Malavika Nair
-Lucky Aswal
-    
+**Infotact Data Analytics Project | Progress & Status Report**
 
-Infotact Data Analytics Project | Progress & Status Report
-
-Real-time IoT sensor analytics to detect in-transit commodity spoilage and identify profitable reroute ("arbitrage") opportunities before goods degrade below quality thresholds.
-
-Python Pandas Status License 
+> Real-time IoT sensor analytics to detect in-transit commodity spoilage and identify profitable reroute ("arbitrage") opportunities before goods degrade below quality thresholds.
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458)
-![Status](https://img.shields.io/badge/Status-Week%201%20Complete-brightgreen)
+![PowerBI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811)
+![Status](https://img.shields.io/badge/Status-Week%203%20Complete-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ---
@@ -25,11 +22,12 @@ Python Pandas Status License
 
 Traditional supply chain analytics rely on standard transit times and macro-weather forecasts — they miss hyper-local micro-climate shifts (e.g. a humidity spike inside one specific container) that quietly spoil agricultural cargo before it reaches market.
 
-**AtmoSync** simulates a live IoT sensor pipeline for refrigerated shipping containers, calculates a real-time **spoilage risk score**, and flags **"Spoilage Arbitrage"** opportunities — cases where rerouting a container to a closer secondary market preserves more value than pushing on to the original destination.The core of this analysis relies on rigorous data cleaning and validation protocols to ensure these real-time risk scores remain highly accurate.
+**AtmoSync** simulates a live IoT sensor pipeline for refrigerated shipping containers, calculates a real-time **spoilage risk score**, and flags **"Spoilage Arbitrage"** opportunities — cases where rerouting a container to a closer secondary market preserves more value than pushing on to the original destination.
 
-This repository documents my work as the **Data Analyst** on the project (data engineering tools like Kafka/Snowflake/dbt/Superset were out of scope — this build uses Python + pandas + Excel instead, to match an analyst's toolkit).
+This repository documents our work as the **Data Analytics Team** on the project, using Python, pandas, data visualizations, Power BI, and executive presentation materials to build actionable business insights.
 
 ---
+
 ## ✅ Progress Tracking
 
 ### Week 1 — Data Foundations & EDA
@@ -41,7 +39,6 @@ This repository documents my work as the **Data Analyst** on the project (data e
 | 4 | Conducted initial Exploratory Data Analysis (EDA) on spoilage factors | ✅ Done |
 | 5 | Compiled findings into stakeholder-ready reports | ✅ Done |
 
-
 ### Week 2 — Dashboard Visualizations & In-Depth Modeling
 | # | Task | Status |
 |---|------|--------|
@@ -51,7 +48,6 @@ This repository documents my work as the **Data Analyst** on the project (data e
 | 4 | Evaluated multi-metric correlation matrix for micro-climate factors | ✅ Done |
 | 5 | Performed market price comparisons for micro-climate arbitrage | ✅ Done |
 
----
 ### Week 3 — Power BI Dashboard Development & Deployment
 | # | Task | Status |
 |---|------|--------|
@@ -66,7 +62,8 @@ This repository documents my work as the **Data Analyst** on the project (data e
 | 9 | Documented full build process (step-by-step guide + DAX reference) for handoff | ✅ Done |
 
 ---
- ## 📊 Key Findings & Visual Insights (Week 2)
+
+## 📊 Key Findings & Visual Insights (Week 2)
 
 ### 1. Temperature Control & Drift Tracking
 * **Trace Analysis (`chart1_temperature_trace.png`):** Real-time monitoring shows distinct containers exceeding safe thermal limits during mid-transit.
@@ -83,108 +80,36 @@ This repository documents my work as the **Data Analyst** on the project (data e
 
 ---
 
-## 🗂️ Dataset Summary
+## 📊 Key Findings & Visual Insights (Week 3)
 
-| Property | Value |
-|---|---|
-| Total sensor readings | 50,000 |
-| Containers tracked | 550 |
-| Commodities covered | Avocado, Banana, Mango, Strawberry, Tomato, Grapes, Blueberry |
-| Reading frequency | Every 30 minutes across a ~50-hour transit journey |
-| Time span | Last 60 days |
-| Data completeness | 100% (0 missing values) |
-| Duplicate records | 0 |
+### 1. From Static Charts to a Live Decision Tool
+* Week 2's matplotlib/seaborn analysis confirmed *what* drives spoilage risk; Week 3 turned those findings into a **self-service Power BI dashboard** that operations staff can filter, drill into, and monitor without needing Python or notebooks.
 
-**Key columns:**
-- **Sensor data:** `temperature_c`, `humidity_pct`, `vibration_g`
-- **Derived health metrics:** `quality_score`, `temp_deviation_c`, `shelf_life_hours_remaining`
-- **Logistics:** `origin_port`, `primary_market`, `secondary_market`, `distance_primary_km`, `distance_secondary_km`
-- **Financials:** `primary_price_per_kg_usd`, `secondary_price_per_kg_usd`, `arbitrage_gain_usd`
-- **Decision output:** `risk_status` (Normal / Watch / At-Risk / Critical), `recommended_action`
+### 2. Fleet-Wide Risk Visibility
+* The **Executive Overview** page surfaces, at a glance, how many of the 550 active containers are currently `At-Risk` or `Critical`, and which commodities are disproportionately affected — directly operationalizing the Week 2 correlation findings.
 
----
+### 3. Root-Cause Drill-Down
+* The **Environmental Monitoring** page's temperature-vs-vibration scatter and drift watchlist make it possible to distinguish *cooling-unit failures* from *rough-handling events* as separate spoilage causes, rather than treating all temperature deviation as one category.
 
-## 🧹 Data Cleaning Process (Python / pandas)
+### 4. Real-Time Arbitrage Decisioning
+* The **Financial / Arbitrage Analysis** page converts the Week 2 price-comparison findings into an actionable per-container view — ranking shipments by `arbitrage_gain_usd` so the highest-value rerouting opportunities are immediately visible, with `Containers Favoring Secondary Market` quantifying how many shipments per commodity would benefit from rerouting today.
 
-All 9 steps were run against the raw dataset before analysis:
-
-```python
-import pandas as pd
-
-# 1. Load & inspect
-df = pd.read_csv("atmosync_dataset.csv")
-df.shape, df.info()
-
-# 2. Missing values
-df.isnull().sum()
-
-# 3. Duplicates
-df.duplicated().sum()
-
-# 4. Fix data types
-df["timestamp"] = pd.to_datetime(df["timestamp"])
-df["commodity"] = df["commodity"].astype("category")
-
-# 5. Standardize text
-df["origin_port"] = df["origin_port"].str.strip()
-
-# 6. Validate business rules
-(df["quality_score"] < 0).sum()
-(df["quality_score"] > 100).sum()
-
-# 7. Flag (not delete) genuine outlier events
-df["data_quality_flag"] = "Normal Reading"
-df.loc[df["temp_deviation_c"] > 3, "data_quality_flag"] = "Significant Temperature Drift"
-
-# 8. Cross-column consistency checks
-(df["ideal_temp_min_c"] >= df["ideal_temp_max_c"]).sum()
-
-# 9. Export cleaned file
-df.to_csv("atmosync_dataset_CLEANED.csv", index=False)
-```
-
-**Cleaning results:**
-
-| Check | Result |
-|---|---|
-| Missing values | 0 |
-| Duplicate rows | 0 |
-| Business-rule violations (negative values, out-of-range scores, future timestamps) | 0 |
-| Outlier readings flagged (not deleted) | 3,647 (7.3%) |
-| Final dataset | 50,000 rows × 31 columns (certified clean) |
-
-> **Design decision:** Outlier sensor readings were **flagged**, not deleted. In this dataset, an unusual reading *is* the spoilage signal the business needs — deleting it would hide the exact problem the project exists to detect.
-
----
-
-## 📊 Key Findings (Week 1 EDA)
-
-- **83%** of containers are currently Normal; **13%** (74 containers) are At-Risk or Critical and need a routing decision.
-- **Temperature deviation** has a strong negative correlation with quality score (**r = -0.84**) — it's the single biggest driver of spoilage, far more than humidity or vibration.
-- **Faulty cooling units** (18.5% of containers) are the root cause of nearly all serious spoilage: average quality score of **40.5** vs. **96.6** for healthy units.
-- **Strawberries, grapes, and blueberries** are the most climate-sensitive commodities; **tomatoes** are the most forgiving.
-- **$538,693** worth of cargo is currently tied up in At-Risk/Critical containers; rerouting the right containers now would capture an estimated **$120,533** in additional value.
-- Commodity Variance: For highly sensitive goods like strawberries and blueberries, this critical action window shrinks to under 8 hours before total loss
-
-*(Full analysis with charts: see `/reports/AtmoSync_Data_Findings_Report.pdf`)*
+### 5. Single-Shipment Traceability
+* The **Container Detail** drill-through page closes the loop from fleet-level insight down to one container's full sensor timeline, supporting audit and incident-review use cases.
 
 ---
 
 ## 🛠️ Tools Used
-
-
 
 | Purpose | Tool |
 |---|---|
 | Data generation & manipulation | Python, pandas, numpy |
 | Data cleaning & validation | pandas |
 | Exploratory analysis & statistical modeling | pandas (`groupby`, `corr`, `value_counts`) |
-| Visualizations & Dashboards | matplotlib, seaborn |
+| Static visualizations (Week 2) | matplotlib, seaborn |
+| Interactive BI dashboard (Week 3) | Microsoft Power BI, DAX |
 | Executive Presentation | Microsoft PowerPoint (`AtmoSync.pptx`) |
 | Version control | Git & GitHub |
-
----
-
 
 ---
 
@@ -210,23 +135,10 @@ atmosync-analytics/
 │   ├── chart6_correlation_heatmap.png     # Multi-metric feature correlation map
 │   └── chart7_price_comparison.png        # Primary vs. secondary market prices
 │
+├── powerbi/
+│   ├── AtmoSync_Dashboard.pbix           # Power BI dashboard file
+│   └── PowerBI_ColdChain_Dashboard_Guide.md # Step-by-step build guide + DAX reference
+│
 ├── AtmoSync.pptx                         # Stakeholder deck
 └── README.md
-
-## 🚀 How to Run This Project
-
-```bash
-# Clone the repo
-git clone https://github.com/Mameeth-4015/atmosync-analytics.git
-cd atmosync-analytics
-
-# Install dependencies
-pip install pandas numpy matplotlib seaborn
-
-# Run the cleaning pipeline
-python scripts/clean_data.py
-
-# Open the analysis notebook
-jupyter notebook notebooks/week1_eda_and_cleaning.ipynb
 ```
---
