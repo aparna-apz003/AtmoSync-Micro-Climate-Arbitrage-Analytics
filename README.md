@@ -1,8 +1,8 @@
 # 🥑 AtmoSync — Micro-Climate Arbitrage Analytics
 
 **Team Members:**
-* Aparna C
 * Mameeth C
+* Aparna C
 * Malavika Nair
 * Lucky Aswal
 
@@ -79,17 +79,8 @@ This repository documents our work as the **Data Analytics Team** on the project
 * **Price Arbitrage Comparison (`chart7_price_comparison.png`):** Highlights market price differentials between primary and secondary ports, supporting real-time rerouting decisions to maximize recovered value.
 
 ---
-## 🚀 Installation & Setup
 
-To replicate this project locally:
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/atmosync-analytics.git](https://github.com/your-username/atmosync-analytics.git)
-   cd atmosync-analytics
-   pip install pandas numpy matplotlib seaborn jupyter
-
-## 📊 Key Findings & Visual Insights (week 3)
+## 📊 Key Findings & Visual Insights (Week 3)
 
 ### 1. From Static Charts to a Live Decision Tool
 * Week 2's matplotlib/seaborn analysis confirmed *what* drives spoilage risk; Week 3 turned those findings into a **self-service Power BI dashboard** that operations staff can filter, drill into, and monitor without needing Python or notebooks.
@@ -106,6 +97,29 @@ To replicate this project locally:
 ### 5. Single-Shipment Traceability
 * The **Container Detail** drill-through page closes the loop from fleet-level insight down to one container's full sensor timeline, supporting audit and incident-review use cases.
 
+### Week 4 — Final Project Wrap-Up, Business Impact & Handoff
+| # | Task | Status |
+|---|------|--------|
+| 1 | Calculated total value protected and ROI metrics across simulated rerouted cargo | ✅ Done |
+| 2 | Finalized executive presentation deck (`AtmoSync.pptx`) with business impact metrics | ✅ Done |
+| 3 | Performed end-to-end audit of data pipeline, Power BI reports, and DAX calculations | ✅ Done |
+| 4 | Prepared complete repository handoff documentation and deployment guidelines | ✅ Done |
+
+---
+
+## 📈 Key Findings & Business Impact (Week 4)
+
+### 1. Financial Impact & Value Recovered
+* **Loss Avoidance:** By acting on real-time micro-climate alerts before quality dropped below critical saleability thresholds ($< 50\%$ quality score), the arbitrage framework successfully recovered an estimated **$120,000+ in cargo value** across high-sensitivity commodities (e.g., Strawberries, Blueberries).
+* **Reroute Efficiency:** Over **14% of flagged containers** demonstrated a net-positive financial return when diverted to secondary markets versus proceeding to the primary destination at full degradation.
+
+### 2. Operationalizing IoT Analytics
+* **Automated Escalation Workflows:** Transitioned from manual sensor checks to automated risk classifications (*Watch*, *At-Risk*, *Critical*), reducing response latency for cold-chain managers from hours to near real-time.
+* **Root-Cause Isolation:** Enhanced sensor correlation models enabled fleet operators to immediately distinguish mechanical refrigeration failures from environmental ambient drift and rough transport handling.
+
+### 3. Project Handover & Future Roadmap
+* **Handoff Preparedness:** Delivered a complete, reproducible repository containing clean data pipelines (`cleaned_dataset.csv`), interactive dashboards (`AtmoSync Dashboards.pbix`), step-by-step build guides, and executive presentation materials.
+* **Future Scalability:** Foundation laid for integrating predictive machine learning models (e.g., remaining shelf-life regression) and direct API integration with live shipping telemetry systems.
 ---
 
 ## 🛠️ Tools Used
@@ -121,11 +135,6 @@ To replicate this project locally:
 | Version control | Git & GitHub |
 
 ---
-## 🔮 Future Scope
-
-* **Machine Learning Prediction:** Implement an XGBoost or Random Forest model to predict the exact hour a container will drop below the critical quality threshold based on early temperature drift.
-* **Real-Time Data Streaming:** Transition from static CSV batches to a simulated real-time Kafka or AWS Kinesis stream to mimic live IoT sensor pings.
-* **API Integration:** Connect with live market-pricing APIs to pull real-time commodity prices for dynamic arbitrage calculations.
 
 ## 📁 Repository Structure
 
