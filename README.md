@@ -1,7 +1,7 @@
 # 🥑 AtmoSync — Micro-Climate Arbitrage Analytics
 
 **Team Members:**
-*  Aparna c
+
 *  Mameeth C
 * Malavika Nair
 * Lucky Aswal
