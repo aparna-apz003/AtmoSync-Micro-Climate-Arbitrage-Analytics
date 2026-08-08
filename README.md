@@ -1,7 +1,7 @@
 # 🥑 AtmoSync — Micro-Climate Arbitrage Analytics
 
 **Team Members:**
-* Aparna c
+*  Aparna c
 *  Mameeth C
 * Malavika Nair
 * Lucky Aswal
@@ -121,6 +121,7 @@ This repository documents our work as the **Data Analytics Team** on the project
 * **Handoff Preparedness:** Delivered a complete, reproducible repository containing clean data pipelines (`cleaned_dataset.csv`), interactive dashboards (`AtmoSync Dashboards.pbix`), step-by-step build guides, and executive presentation materials.
 * **Future Scalability:** Foundation laid for integrating predictive machine learning models (e.g., remaining shelf-life regression) and direct API integration with live shipping telemetry systems.
 ---
+
 
 ## 🛠️ Tools Used
 
