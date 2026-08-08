@@ -96,6 +96,7 @@ This repository documents our work as the **Data Analytics Team** on the project
 
 ### 5. Single-Shipment Traceability
 * The **Container Detail** drill-through page closes the loop from fleet-level insight down to one container's full sensor timeline, supporting audit and incident-review use cases.
+* Dynamic Drill-Through Filtering: Configured a Container Detail drill-through page, allowing users to select a single shipment from the main dashboard and isolate its exact chronological sensor history.
 
 ### Week 4 — Final Project Wrap-Up, Business Impact & Handoff
 | # | Task | Status |
